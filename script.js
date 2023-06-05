@@ -41,8 +41,6 @@ class Paddle {
 
   moveUp() {
     this.upIntervalID = setInterval(() => {
-      // console.log("moving up");
-
       if (this.top > 0) {
         this.top -= this.speed;
         this.draw();
@@ -54,8 +52,6 @@ class Paddle {
 
   moveDown() {
     this.downIntervalID = setInterval(() => {
-      // console.log("moving down");
-
       if (this.top + paddleHeight < boardHeight) {
         this.top += this.speed;
         this.draw();
@@ -193,5 +189,3 @@ function restartGame() {
   clearInterval(ballIntervalID);
   startGame();
 }
-
-// ball speedY needs to increment too... but figure out direction
